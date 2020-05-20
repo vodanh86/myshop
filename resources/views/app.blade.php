@@ -18,7 +18,7 @@
 <body>
 	<nav class="navbar navbar-expand-sm navbar-light">
 		<a class="navbar-brand" href="/">
-			<img src="https://aimeos.org/fileadmin/template/icons/logo.png" height="30" title="Aimeos Logo">
+		SEIKA
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -41,6 +41,23 @@
 			@yield('aimeos_head')
 		</div>
 	</nav>
+	<div>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item navbar-text ">
+				<a href="/" class="nav-link" role="button" aria-expanded="false">Trang chủ <span class="caret"></span></a>
+			</li>
+			<li class="nav-item navbar-text dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Giới thiệu công ty <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="{{ route('aimeos_shop_account',['site'=>Route::current()->parameter('site','default'),'locale'=>Route::current()->parameter('locale','en'),'currency'=>Route::current()->parameter('currency','EUR')]) }}" title="Profile">Profile</a></li>
+					<li><form id="logout" action="/logout" method="POST">{{csrf_field()}}</form><a href="javascript: document.getElementById('logout').submit();">Logout</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="catalog-stage-image">
+		<img src="/images/image.png">
+	</div>
     <div class="container">
 		@yield('aimeos_nav')
 		@yield('aimeos_stage')

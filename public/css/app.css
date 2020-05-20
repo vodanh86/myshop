@@ -580,7 +580,8 @@ pre code {
 }
 
 .container {
-  width: 100%;
+  width: 100%!important;
+  max-width: 100%!important;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -4349,7 +4350,7 @@ input[type=button].btn-block {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center!important;
   padding: 0.5rem 1rem;
 }
 
@@ -4366,7 +4367,7 @@ input[type=button].btn-block {
   padding-top: 0.32rem;
   padding-bottom: 0.32rem;
   margin-right: 1rem;
-  font-size: 1.125rem;
+  font-size: 3.125rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -4377,11 +4378,11 @@ input[type=button].btn-block {
 }
 
 .navbar-nav {
-  display: flex;
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  text-align: center;
 }
 
 .navbar-nav .nav-link {
@@ -4398,6 +4399,7 @@ input[type=button].btn-block {
   display: inline-block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  margin: 0px 10px;
 }
 
 .navbar-collapse {
@@ -4465,6 +4467,9 @@ input[type=button].btn-block {
   .navbar-expand-sm .navbar-collapse {
     display: flex !important;
     flex-basis: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
   }
 
   .navbar-expand-sm .navbar-toggler {
@@ -4637,7 +4642,7 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: #f08db2;
 }
 
 .navbar-light .navbar-brand:hover,
@@ -4646,7 +4651,7 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: #f08db2;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -10659,7 +10664,7 @@ body {
 .basket-mini-main,
 .basket-mini > a:before,
 .basket-mini-product .basket-toggle {
-  color: #BA9A5A;
+  color: #f08db2;
 }
 
 .locale-select ul.select-menu {

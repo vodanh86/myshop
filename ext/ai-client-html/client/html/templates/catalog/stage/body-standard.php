@@ -54,18 +54,8 @@ $params = $this->get( 'stageParams', [] );
 			<?php endforeach; ?>
 		</ul>
 	<?php endif; ?>
-
-
-	<div class="catalog-stage-image">
-		<?php foreach( $mediaItems as $media ) : ?>
-			<img src="<?= $this->content( $media->getUrl() ); ?>" alt="<?= $enc->attr( $media->getName() ); ?>" />
-		<?php endforeach; ?>
-	</div>
-
-
 	<div class="catalog-stage-breadcrumb">
 		<nav class="breadcrumb">
-			<span class="title"><?= $enc->html( $this->translate( 'client', 'You are here:' ), $enc::TRUST ); ?></span>
 			<ol>
 
 				<?php if( isset( $this->stageCatPath ) ) : ?>
@@ -79,7 +69,6 @@ $params = $this->get( 'stageParams', [] );
 				<?php else : ?>
 					<li>
 						<a href="<?= $enc->attr( $this->url( $listTarget, $listController, $listAction, $params, [], $listConfig ) ); ?>">
-							<?= $enc->html( $this->translate( 'client', 'Your search result' ), $enc::TRUST ); ?>
 						</a>
 					</li>
 				<?php endif; ?>

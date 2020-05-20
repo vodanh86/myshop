@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return redirect('shop');
+    if(Auth::check()) {
+        return redirect('/shop');
+    } else {
+        return view('auth.login');
+    }
 });
 
 Auth::routes();
