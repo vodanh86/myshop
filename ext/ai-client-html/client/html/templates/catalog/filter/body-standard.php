@@ -102,7 +102,7 @@ $enc = $this->encoder();
 
 
 ?>
-<section class="aimeos catalog-filter" data-jsonurl="<?= $enc->attr( $this->url( $optTarget, $optCntl, $optAction, [], [], $optConfig ) ); ?>">
+<section class="aimeos catalog-filter col-3" data-jsonurl="<?= $enc->attr( $this->url( $optTarget, $optCntl, $optAction, [], [], $optConfig ) ); ?>">
 
 	<?php if( isset( $this->filterErrorList ) ) : ?>
 		<ul class="error-list">

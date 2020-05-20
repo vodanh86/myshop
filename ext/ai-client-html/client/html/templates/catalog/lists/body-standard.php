@@ -109,7 +109,7 @@ if( $this->get( 'listProductTotal', 0 ) > 1 && $this->config( 'client/html/catal
 }
 
 ?>
-<section class="aimeos catalog-list<?= $enc->attr( $classes ); ?>" data-jsonurl="<?= $enc->attr( $this->url( $optTarget, $optCntl, $optAction, [], [], $optConfig ) ); ?>">
+<section class="aimeos catalog-list<?= $enc->attr( $classes ); ?> col-9" data-jsonurl="<?= $enc->attr( $this->url( $optTarget, $optCntl, $optAction, [], [], $optConfig ) ); ?>">
 
 	<?php if( isset( $this->listErrorList ) ) : ?>
 		<ul class="error-list">
@@ -153,10 +153,6 @@ if( $this->get( 'listProductTotal', 0 ) > 1 && $this->config( 'client/html/catal
 			<a class="type-item type-list" href="<?= $enc->attr( $this->url( $target, $cntl, $action, array( 'l_type' => 'list' ) + $params, [], $config ) ); ?>"></a>
 		</div>
 	<?php endif; ?>
-
-
-	<?= $pagination; ?>
-
 
 	<?php if( ( $searchText = $this->param( 'f_search', null ) ) != null ) : ?>
 		<div class="list-search">

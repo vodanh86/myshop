@@ -10676,3 +10676,6 @@ body {
     display: none;
   }
 }
+.nav-pills {
+  justify-content: center;
+}

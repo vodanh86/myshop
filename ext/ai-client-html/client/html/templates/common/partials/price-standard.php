@@ -54,6 +54,7 @@ $first = true;
 
 		/// Price format with price value (%1$s) and currency (%2$s)
 		$format['value'] = $this->translate( 'client/code', $key );
+		$format["value"] = '%1$s %2$s';
 		$currency = $this->translate( 'currency', $priceItem->getCurrencyId() );
 		$taxformat = ( $priceItem->getTaxFlag() ? $withtax : $notax );
 	?>
